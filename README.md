@@ -29,6 +29,23 @@
 
 ### インストール
 
+インストール不要。MCP クライアントの設定に以下を追加するだけで使えます:
+
+```json
+{
+  "mcpServers": {
+    "japan-law": {
+      "command": "npx",
+      "args": ["japan-law-mcp"]
+    }
+  }
+}
+```
+
+API キー不要。e-Gov 法令API v2 は公開APIのため、設定するだけですぐ使えます。
+
+### ローカルビルド（開発用）
+
 ```bash
 git clone https://github.com/COREkin/japan-law-mcp.git
 cd japan-law-mcp
@@ -36,30 +53,12 @@ npm install
 npm run build
 ```
 
-API キー不要。e-Gov 法令API v2 は公開APIのため、ビルドすればすぐ使えます。
-
-### MCP クライアント設定
-
-Claude Desktop、Kiro、Cursor など MCP 対応クライアントの設定ファイルに追加:
-
 ```json
 {
   "mcpServers": {
     "japan-law": {
       "command": "node",
       "args": ["/path/to/japan-law-mcp/dist/index.js"]
-    }
-  }
-}
-```
-
-npm に publish 後は以下でも利用可能:
-```json
-{
-  "mcpServers": {
-    "japan-law": {
-      "command": "npx",
-      "args": ["japan-law-mcp"]
     }
   }
 }
