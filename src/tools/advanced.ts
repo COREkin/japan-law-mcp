@@ -86,7 +86,6 @@ export function registerAdvancedTools(server: McpServer): void {
               text: `## 引用検証結果\n\n検出: ${citations.length}件 | 実在: ${passCount} | 不在: ${failCount}\n\n${output}${summary}`,
             },
           ],
-          isError: failCount > 0,
         };
       } catch (error) {
         return {

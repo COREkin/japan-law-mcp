@@ -51,7 +51,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -112,7 +111,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -178,7 +176,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -206,7 +203,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -279,7 +275,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -356,7 +351,6 @@ export function registerBasicTools(server: McpServer): void {
                 ),
               },
             ],
-            isError: true,
           };
         }
 
@@ -479,7 +473,6 @@ export function registerBasicTools(server: McpServer): void {
             text: `## バッチ検索結果\n\n成功: ${successCount} / 失敗: ${failCount}\n\n${results.join("\n\n")}`,
           },
         ],
-        isError: failCount > 0 && successCount === 0,
       };
     }
   );
