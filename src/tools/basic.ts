@@ -329,11 +329,11 @@ export function registerBasicTools(server: McpServer): void {
   );
 
   /**
-   * get_law_revisions — 改正履歴
+   * get_enactment_info — 制定日確認
    */
   server.tool(
-    "get_law_revisions",
-    "法令の改正履歴（沿革）を取得します",
+    "get_enactment_info",
+    "法令の制定日（公布日）を確認します",
     {
       law_name: z.string().describe("法令名（略称可）"),
     },
@@ -363,7 +363,7 @@ export function registerBasicTools(server: McpServer): void {
             content: [
               {
                 type: "text" as const,
-                text: `## ${normalizeLawName(law_name)} — 改正履歴\n\n現行版のみ確認できました。\n- ${revisions[0]?.lawTitle} (${revisions[0]?.promulgationDate || "日付不明"})`,
+                text: `## ${normalizeLawName(law_name)} — 制定日\n\n- ${revisions[0]?.lawTitle} (公布日: ${revisions[0]?.promulgationDate || "日付不明"})`,
               },
             ],
           };
@@ -380,7 +380,7 @@ export function registerBasicTools(server: McpServer): void {
           content: [
             {
               type: "text" as const,
-              text: `## ${normalizeLawName(law_name)} — 改正履歴\n\n${text}`,
+              text: `## ${normalizeLawName(law_name)} — 制定日\n\n${text}`,
             },
           ],
         };

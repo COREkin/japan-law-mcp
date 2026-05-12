@@ -1,6 +1,6 @@
 {
   "name": "japan-law-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for Japanese law - e-Gov API v2 with citation verification, impact mapping, time travel diff, and action planning",
   "main": "dist/index.js",
   "bin": {

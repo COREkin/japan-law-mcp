@@ -7,3 +7,6 @@ dist/
 .env.local
 coverage/
 .DS_Store
+
+# Local assets (screenshots, drafts, diagrams)
+local-assets/
